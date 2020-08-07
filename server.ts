@@ -1,17 +1,20 @@
 import { Table } from "./db-utils/Table";
+import { User } from "./models/User";
+import { getAllData } from "./state";
 
-const fs = require('fs');
-const dbPath = './db.json';
-const db = fs.open(dbPath, 6, (err: any, fd: number) => console.log(err, fd));
+getAllData();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 8000;
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(port, () => console.log(`listen on port ${port}`));
 
 app.get('/', (req: any, res: any) => {
     const getParams = req.query;
-    // const t = new Table('sdfjksdf');
+    const User = new Table<User>('User');
+    User.findRowById('1');
     res.json({ success: true });
 })
