@@ -8,13 +8,22 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 8000;
+const cors = require('cors')
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({
+    origin: '*'
+}));
 app.listen(port, () => console.log(`listen on port ${port}`));
 
+function isUserLoggedIn(id: string) {
+    return !!(new Table<User>('User').findRowById(id));
+
+}
+
 app.get('/', (req: any, res: any) => {
-    const getParams = req.query;
-    const User = new Table<User>('User');
-    User.findRowById('1');
-    res.json({ success: true });
+    console.log(Object.keys(req));
+    console.log(req.headers)
+    console.log(req.query);
+    res.json({ error: null });
 })

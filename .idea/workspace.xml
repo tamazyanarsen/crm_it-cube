@@ -19,15 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a30de2c-04ae-416c-88ca-2a10451769e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/state/allData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/state/index.ts" afterDir="false" />
+    <list default="true" id="1a30de2c-04ae-416c-88ca-2a10451769e0" name="Default Changelist" comment="добавление и редактирование записей">
+      <change afterPath="$PROJECT_DIR$/models/Project.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Section.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Task.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-utils/Table.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db-utils/Table.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +76,16 @@
       <workItem from="1596715607167" duration="1882000" />
       <workItem from="1596774748192" duration="5000" />
       <workItem from="1596789264579" duration="3955000" />
-      <workItem from="1596799234535" duration="2939000" />
+      <workItem from="1596799234535" duration="6028000" />
     </task>
+    <task id="LOCAL-00001" summary="добавление и редактирование записей">
+      <created>1596802193427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596802193427</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +101,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="добавление и редактирование записей" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление и редактирование записей" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1119" y="395" key="Github.ShareDialog" timestamp="1596793457581">
@@ -123,6 +131,10 @@
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
     <state width="2530" height="256" key="GridCell.Tab.0.right/0.0.2560.1044@0.0.2560.1044" timestamp="1596793475331" />
+    <state x="780" y="191" key="Vcs.Push.Dialog.v2" timestamp="1596802195271">
+      <screen x="0" y="0" width="2560" height="1044" />
+    </state>
+    <state x="780" y="191" key="Vcs.Push.Dialog.v2/0.0.2560.1044@0.0.2560.1044" timestamp="1596802195271" />
     <state x="859" y="8" width="840" height="1034" key="search.everywhere.popup" timestamp="1596790660209">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
