@@ -20,9 +20,19 @@ function isUserLoggedIn(id: string) {
     return !!(new Table<User>('User').findRowById(id));
 }
 
+function checkAdmin(): boolean {
+    return !!(new Table<User>('User').findRowByFieldName('name', 'admin'));
+}
+
+function isToken(headers: any): boolean {
+    return !!headers.token;
+}
+
 app.get('/', (req: any, res: any) => {
     console.log(Object.keys(req));
     console.log(req.headers)
     console.log(req.query);
-    res.json({ error: null, token: isUserLoggedIn(req.headers.token) });
-})
+    res.json({ error: null });
+});
+
+module.exports = app;

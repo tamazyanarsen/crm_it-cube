@@ -38,4 +38,8 @@ export class Table<T> {
         ld.merge(this.data.find((e: any) => e.id === currentItem.id), currentItem);
         updateFileState();
     }
+
+    findRowByFieldName(fieldName: string, value: any): T {
+        return this.data((e: any) => e[fieldName] === value);
+    }
 }
