@@ -18,12 +18,11 @@ app.listen(port, () => console.log(`listen on port ${port}`));
 
 function isUserLoggedIn(id: string) {
     return !!(new Table<User>('User').findRowById(id));
-
 }
 
 app.get('/', (req: any, res: any) => {
     console.log(Object.keys(req));
     console.log(req.headers)
     console.log(req.query);
-    res.json({ error: null });
+    res.json({ error: null, token: isUserLoggedIn(req.headers.token) });
 })
