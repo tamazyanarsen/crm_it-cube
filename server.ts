@@ -10,23 +10,19 @@ const app = express();
 const port = 8000;
 const cors = require('cors')
 
+app.use(express.json()) // for parsing application/json
+// app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin: '*'
 }));
-app.listen(port, () => console.log(`listen on port ${port}`));
 
-function isUserLoggedIn(id: string) {
-    return !!(new Table<User>('User').findRowById(id));
-}
+const auth = require('./routes/auth');
+app.use('/auth', auth);
 
-function checkAdmin(): boolean {
-    return !!(new Table<User>('User').findRowByFieldName('name', 'admin'));
-}
-
-function isToken(headers: any): boolean {
-    return !!headers.token;
-}
+const projects = require('./routes/projects');
+app.use('/projects', projects);
 
 app.get('/', (req: any, res: any) => {
     console.log(Object.keys(req));
@@ -34,5 +30,7 @@ app.get('/', (req: any, res: any) => {
     console.log(req.query);
     res.json({ error: null });
 });
+
+app.listen(port, () => console.log(`listen on port ${port}`));
 
 module.exports = app;

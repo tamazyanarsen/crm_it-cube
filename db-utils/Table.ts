@@ -21,10 +21,14 @@ export class Table<T> {
             data[this.name] = [];
         }
         this.data = data[this.name];
+        // console.log('constructor', this.data, data);
+    }
+
+    getAllRows(): T[] {
+        return this.data;
     }
 
     findRowById(id: string): T {
-        console.log(this.data);
         return this.data.find((e: any) => e.id === id);
     }
 
@@ -40,6 +44,6 @@ export class Table<T> {
     }
 
     findRowByFieldName(fieldName: string, value: any): T {
-        return this.data((e: any) => e[fieldName] === value);
+        return this.data.find((e: any) => e[fieldName] === value);
     }
 }
