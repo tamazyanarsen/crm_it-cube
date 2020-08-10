@@ -19,11 +19,11 @@ router.get("/isAuth", function (req: any, res: any) {
 });
 
 router.post('/login', (req: any, res: any) => {
-    const { login, password } = req.body;
+    const { email, password } = req.body;
     const User = new Table<User>('User');
-    const user = User.findRowByFieldName('login', login);
+    const user = User.findRowByFieldName('email', email);
     const answer: any = {};
-    if (user.password === password) {
+    if (user && user.password === password) {
         answer.token = user.id;
     } else {
         answer.error = 'Неправильно введены данные';

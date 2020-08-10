@@ -20,8 +20,7 @@ export function getAllData() {
                 id: uuidv4(),
                 name: 'admin',
                 role: 'admin',
-                email: 'tamazyanarsen@mail.ru',
-                login: 'admin',
+                email: 'admin',
                 password: 'admin'
             });
         }
