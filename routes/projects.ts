@@ -11,4 +11,10 @@ router.get("/", function (req: any, res: any) {
     res.json({ data: Projects.getAllRows() });
 });
 
+router.post("/", (req: any, res: any) => {
+    const data = req.body;
+    console.log(data);
+    res.json({});
+});
+
 module.exports = router;
