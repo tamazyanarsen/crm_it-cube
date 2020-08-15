@@ -1,1 +1,22 @@
-{"User":[{"id":"90714e46-7492-48ef-85b8-cc932af5b646","name":"admin","role":"admin","email":"admin","password":"admin"}]}
+{
+  "User": [
+    {
+      "id": "90714e46-7492-48ef-85b8-cc932af5b646",
+      "name": "admin",
+      "role": "admin",
+      "email": "admin",
+      "password": "admin"
+    }
+  ],
+  "Project": [
+    {
+      "name": "sdkfhsdf",
+      "links": "",
+      "startDate": "2020-08-14",
+      "endDate": "2020-08-14",
+      "participantsCount": "12",
+      "location": "moscow",
+      "id": "b738aba1-20a4-405e-abb4-f125f20aa828"
+    }
+  ]
+}

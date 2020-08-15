@@ -21,6 +21,7 @@ export class Table<T> {
             data[this.name] = [];
         }
         this.data = data[this.name];
+        console.log(name);
         // console.log('constructor', this.data, data);
     }
 
@@ -35,6 +36,7 @@ export class Table<T> {
     addRow(item: T) {
         this.data.push({ ...item, id: uuidv4() });
         updateFileState();
+        return item;
     }
 
     updateRow(item: T) {
